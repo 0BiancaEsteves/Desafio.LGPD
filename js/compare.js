@@ -89,17 +89,17 @@ function UpdateCompareTable() {
     for(let i = 0; i < carArr.length; i++){
         const car = carArr[i];
 
-        document.getElementByIduetElementByid(`compare_image ${i}`).innerHTML = `<img src="${car.image}"
-        width="100">`;
-        document.getElementById(`compare_modelo_${i}`).textContent = carArr.nome;
+        document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="100">`;
+
+        document.getElementById(`compare_modelo_${i}`).textContent = car.nome;
         document.getElementById(`compare_alturacacamba_${i}`).textContent = car.alturaCacamba;
         document.getElementById(`compare_alturaveiculo_${i}`).textContent = car.alturaVeiculo;
         document.getElementById(`compare_alturasolo_${i}`).textContent = car.alturaSolo;
-        document.getElementById(`compare_capacidadedecarga_${i}`).textContent = car.capacidadeCarga;
+        document.getElementById(`compare_capacidadecarga_${i}`).textContent = car.capacidadeCarga;
         document.getElementById(`compare_motor_${i}`).textContent = car.motor;
         document.getElementById(`compare_potencia_${i}`).textContent = car.potencia;
-        document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba;
-        document.getElementById(`compare_roda_${i}`).textContent = car.roda
+        document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba
+        document.getElementById(`compare_roda_${i}`).textContent = car.roda;
         document.getElementById(`compare_preco_${i}`).textContent = 
         `R$ ${car.preco.toLocaleString('pt-BR')}`;
     }
